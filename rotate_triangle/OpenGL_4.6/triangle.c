@@ -39,9 +39,9 @@ void printCompilerInfoLog(GLuint shader) {
 GLuint createProgram() {
 	GLuint program = glCreateProgram();
 	
-	GLuint vertex_shader = glCreateShader(GL_VERTEX_SHADER);
 	char *vertex_shader_src = loadFile("shader.vert");
 	if (vertex_shader_src != NULL) {
+		GLuint vertex_shader = glCreateShader(GL_VERTEX_SHADER);
 		glShaderSource(vertex_shader, 1, (const char **)&vertex_shader_src, NULL);
 		glCompileShader(vertex_shader);
 		printCompilerInfoLog(vertex_shader);
@@ -49,9 +49,9 @@ GLuint createProgram() {
 		glDeleteShader(vertex_shader);
 	}
 	
-	GLuint fragment_shader = glCreateShader(GL_FRAGMENT_SHADER);
 	char *fragment_shader_src = loadFile("shader.frag");
 	if (fragment_shader_src != NULL) {
+		GLuint fragment_shader = glCreateShader(GL_FRAGMENT_SHADER);
 		glShaderSource(fragment_shader, 1, (const char **)&fragment_shader_src, NULL);
 		glCompileShader(fragment_shader);
 		printCompilerInfoLog(fragment_shader);
