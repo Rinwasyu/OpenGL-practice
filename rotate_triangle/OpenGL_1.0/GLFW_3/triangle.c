@@ -12,7 +12,7 @@ int main(void) {
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 0);
 	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_ANY_PROFILE);
 	
-	GLFWwindow *window = glfwCreateWindow(800, 800, "Hello OpenGL 4.6", NULL, NULL);
+	GLFWwindow *window = glfwCreateWindow(800, 800, "Hello OpenGL 1.0", NULL, NULL);
 	if (!window) {
 		glfwTerminate();
 		return EXIT_FAILURE;
